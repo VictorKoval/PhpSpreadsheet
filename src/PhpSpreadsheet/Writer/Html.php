@@ -1000,6 +1000,15 @@ class Html extends BaseWriter
 
         // Create CSS
         $css['vertical-align'] = $this->mapVAlign($pStyle->getVertical());
+
+        $rotation = $pStyle->getTextRotation();
+        if($rotation != 0){
+            $css['text-rotate'] = $rotation;
+            $css['transform'] = "rotate({$rotation}deg)";
+        }
+        
+
+
         $textAlign = $this->mapHAlign($pStyle->getHorizontal());
         if ($textAlign) {
             $css['text-align'] = $textAlign;
