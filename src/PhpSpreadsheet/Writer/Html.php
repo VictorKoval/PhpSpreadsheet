@@ -1004,8 +1004,6 @@ class Html extends BaseWriter
         $rotation = $pStyle->getTextRotation();
         if($rotation != 0){
             $css['text-rotate'] = $rotation;
-            $rotation *= -1;
-            $css['transform'] = "rotate({$rotation}deg)";
         }
         
 
